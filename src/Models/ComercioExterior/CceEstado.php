@@ -6,19 +6,22 @@ namespace Phpcfdi\LaravelSatCatalogs\Models\ComercioExterior;
 
 use Phpcfdi\LaravelSatCatalogs\Models\BaseSatCatalogModel;
 
-class CceClavesPedimentos extends BaseSatCatalogModel
+class CceEstado extends BaseSatCatalogModel
 {
     /**
      * @var string
      */
-    protected $table = 'cce_claves_pedimentos';
+    protected $table = 'cce_estados';
     /**
      * The attributes that are mass assignable.
      *
      * @var array<string>
      */
     protected $fillable = [
-        'id',
+        'estado',
+        'pais',
         'texto',
+        'vigencia_desde',
+        'vigencia_hasta',
     ];
 }
