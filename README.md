@@ -50,7 +50,20 @@ $productoServicio = Cfdi40ProductoServicio::first();
 ```
 ## Catálogos incluidos
 
-Por el momento los catálogos disponibles son todos los correspondientes a CFDI40 y los correspondientes a Comercio Exterior.
+Por el momento los catálogos disponibles son todos los correspondientes a `CFDI40` y los correspondientes a `Comercio Exterior`.
+
+## Compatibilidad
+
+Esta librería se mantendrá compatible con al menos la versión con
+[soporte activo de PHP](https://www.php.net/supported-versions.php) más reciente.
+
+También utilizamos [Versionado Semántico 2.0.0](https://semver.org/lang/es/)
+por lo que puedes usar esta librería sin temor a romper tu aplicación.
+
+## Contribuciones
+
+Las contribuciones con bienvenidas. Por favor lee [CONTRIBUTING][] para más detalles
+y recuerda revisar el archivo de tareas pendientes [TODO][] y el archivo [CHANGELOG][].
 
 
 ## Copyright and License
