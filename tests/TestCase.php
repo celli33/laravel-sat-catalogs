@@ -4,8 +4,12 @@ declare(strict_types=1);
 
 namespace PhpCfdi\LaravelSatCatalogs\Tests;
 
+use Illuminate\Database\Eloquent\InvalidCastException;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Config;
 use Orchestra\Testbench\TestCase as Orchestra;
+use SebastianBergmann\RecursionContext\InvalidArgumentException;
+use PHPUnit\Framework\ExpectationFailedException;
 
 abstract class TestCase extends Orchestra
 {
@@ -25,5 +29,28 @@ abstract class TestCase extends Orchestra
                 ]
             ]
         ]);
+    }
+
+    /**
+     * @param array<string> $expectedProperties
+     */
+    public function assertExpectedModelKeys(Model $model, array $expectedProperties): void
+    {
+        $keys = array_keys($model->toArray());
+        $this->assertEquals($expectedProperties, $keys);
+    }
+
+    /**
+     * Assert tableName is $expectedTableName has $expectedRows count and $expectedKeys in table
+     *
+     * @param array<string> $expectedKeys
+     */
+    public function assertTableNamePropertiesAndCount(string $modelName, string $expectedTableName, array $expectedKeys, int $expectedRows): void
+    {
+        $tableName = $modelName::query()->getQuery()->from;
+        $this->assertEquals($expectedRows, $modelName::count(), "The expected count of ${tableName} table has changed.");
+        $model = $modelName::first();
+        $this->assertExpectedModelKeys($model, $expectedKeys);
+        $this->assertEquals($expectedTableName, $tableName);
     }
 }
