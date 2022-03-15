@@ -40,13 +40,20 @@ Dentro del archivo `config/database.php` dentro del array `connections` crea la 
 ```
 ## EJemplos de uso:
 
-Los catálogos vienen distribuidos dentro de su correspondiente namespace y se usan del mismo que un modelo común de laravel, por ejemplo para obtener catálogos de Cfdi40:
+Los catálogos vienen distribuidos dentro de su correspondiente namespace y se usan del mismo mode que un modelo común de laravel, por ejemplo, para obtener catálogos de Cfdi40:
 ```php
 use Phpcfdi\LaravelSatCatalogs\Models\Cfdi40\Cfdi40ProductoServicio;
 use Phpcfdi\LaravelSatCatalogs\Models\Cfdi40\Cfdi40CodigoPostal;
 
 $codigoPostal = Cfdi40CodigoPostal::where('id', '72030')->first();
 $productoServicio = Cfdi40ProductoServicio::first();
+```
+
+Catálogos de Comercio Exterior:
+```php
+use Phpcfdi\LaravelSatCatalogs\Models\ComercioExterior\CceClavePedimento;
+
+$clavePedimento = CceClavePedimento::first();
 ```
 ## Catálogos incluidos
 
@@ -62,7 +69,7 @@ por lo que puedes usar esta librería sin temor a romper tu aplicación.
 
 ## Contribuciones
 
-Las contribuciones con bienvenidas. Por favor lee [CONTRIBUTING][] para más detalles
+Las contribuciones son bienvenidas. Por favor lee [CONTRIBUTING][] para más detalles
 y recuerda revisar el archivo de tareas pendientes [TODO][] y el archivo [CHANGELOG][].
 
 
