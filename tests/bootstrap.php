@@ -2,9 +2,6 @@
 
 declare(strict_types=1);
 
-use Illuminate\Foundation\Bootstrap\RegisterFacades;
-use Illuminate\Foundation\Bootstrap\LoadConfiguration;
-
 // report all errors
 error_reporting(-1);
 

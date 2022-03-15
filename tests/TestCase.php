@@ -4,12 +4,9 @@ declare(strict_types=1);
 
 namespace PhpCfdi\LaravelSatCatalogs\Tests;
 
-use Illuminate\Database\Eloquent\InvalidCastException;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Config;
 use Orchestra\Testbench\TestCase as Orchestra;
-use SebastianBergmann\RecursionContext\InvalidArgumentException;
-use PHPUnit\Framework\ExpectationFailedException;
 
 abstract class TestCase extends Orchestra
 {
@@ -25,9 +22,9 @@ abstract class TestCase extends Orchestra
                         'database' => __DIR__ . '/../catalogs.db',
                         'prefix' => '',
                         'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
-                    ]
-                ]
-            ]
+                    ],
+                ],
+            ],
         ]);
     }
 
