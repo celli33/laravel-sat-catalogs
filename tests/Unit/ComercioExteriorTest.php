@@ -58,7 +58,7 @@ class ComercioExteriorTest extends TestCase
             'vigencia_hasta',
             'unidad',
         ];
-        $this->assertTableNamePropertiesAndCount(CceFraccionArancelaria::class, 'cce_fracciones_arancelarias', $expectedKeys, 24617);
+        $this->assertTableNamePropertiesAndCount(CceFraccionArancelaria::class, 'cce_fracciones_arancelarias', $expectedKeys, 2462);
     }
 
     public function test_incoterms(): void
