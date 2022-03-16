@@ -125,4 +125,4 @@ jobs:
         if: matrix.operating-systems == 'windows-latest'
         run: vendor/bin/phpunit --testdox --verbose
         env: 
-          sqlite: 'C:\ProgramData\chocolatey\lib\SQLite\tools'
+          sqlite3: 'C:\ProgramData\chocolatey\lib\SQLite\tools'
