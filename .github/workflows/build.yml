@@ -102,6 +102,9 @@ jobs:
       - name: sudo Install sqlite3 on linux
         if: matrix.operating-systems == 'ubuntu-latest' && github.actor == 'nektos/act'
         run: sudo apt-get install -y -qq sqlite3
+      - name: sudo Install sqlite3 on Windows
+        if: matrix.operating-systems == 'windows-latest'
+        run: choco install --ignore-checksums --no-progress --yes sqlite
       - name: Get composer cache directory
         id: composer-cache
         run: echo "::set-output name=dir::$(composer config cache-files-dir)"
@@ -115,9 +118,5 @@ jobs:
         run: composer upgrade --no-interaction --no-progress --prefer-dist
       - name: Download Catalogs
         run: ./bin/create-catalogs-database catalogs.db
-      - name: Tests (phpunit) on linux
-        if: matrix.operating-systems == 'ubuntu-latest'
-        run: vendor/bin/phpunit --testdox --verbose
-      - name: Tests (phpunit) on windows
-        if: matrix.operating-systems == 'windows-latest'
+      - name: Tests (phpunit) on ${{ matrix.operating-systems }}
         run: vendor/bin/phpunit --testdox --verbose
