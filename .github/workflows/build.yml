@@ -118,5 +118,11 @@ jobs:
         run: composer upgrade --no-interaction --no-progress --prefer-dist
       - name: Download Catalogs
         run: ./bin/create-catalogs-database catalogs.db
-      - name: Tests (phpunit) on ${{ matrix.operating-systems }}
+      - name: Tests (phpunit) on Linux
+        if: matrix.operating-systems == 'ubuntu-latest'
         run: vendor/bin/phpunit --testdox --verbose
+      - name: Tests (phpunit) on Windows
+        if: matrix.operating-systems == 'windows-latest'
+        run: vendor/bin/phpunit --testdox --verbose
+        env: 
+          sqlite: 'C:\ProgramData\chocolatey\lib\SQLite\tools'
