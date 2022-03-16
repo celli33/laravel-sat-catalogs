@@ -85,13 +85,24 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Setup PHP
+      - name: Setup PHP on Linux
+        if: matrix.operating-systems == 'ubuntu-latest'
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-versions }}
+          extensions: sqlite3
+          coverage: none
+          tools: composer:v2
+        env:
+          fail-fast: true
+      - name: Setup PHP on Windows
+        if: matrix.operating-systems == 'windows-latest'
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php-versions }}
           extensions: sqlite3, fileinfo
           coverage: none
-          tools: composer:v2
+          tools: composer:v2, sqlite
         env:
           fail-fast: true
       # only for local testing in nektos
@@ -102,9 +113,6 @@ jobs:
       - name: sudo Install sqlite3 on linux
         if: matrix.operating-systems == 'ubuntu-latest' && github.actor == 'nektos/act'
         run: sudo apt-get install -y -qq sqlite3
-      - name: Install sqlite3 on Windows
-        if: matrix.operating-systems == 'windows-latest'
-        run: choco install --ignore-checksums --no-progress --yes sqlite
       - name: Get composer cache directory
         id: composer-cache
         run: echo "::set-output name=dir::$(composer config cache-files-dir)"
@@ -124,5 +132,3 @@ jobs:
       - name: Tests (phpunit) on Windows
         if: matrix.operating-systems == 'windows-latest'
         run: vendor/bin/phpunit --testdox --verbose
-        env: 
-          sqlite: 'C:\ProgramData\chocolatey\lib\SQLite\tools\sqlite-tools-win32-x86-3380100\sqlite3.exe'
