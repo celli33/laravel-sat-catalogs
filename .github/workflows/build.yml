@@ -76,8 +76,8 @@ jobs:
         run: phpstan analyse --no-progress --verbose
 
   tests:
-    name: Tests on PHP ${{ matrix.php-versions }}
-    runs-on: "ubuntu-latest"
+    name: PHP ${{ matrix.php-versions }} on ${{ matrix.operating-systems }}
+    runs-on: ${{ matrix.operating-systems }}
     strategy:
       matrix:
         operating-systems: [ "ubuntu-latest", "windows-latest" ]
@@ -113,5 +113,9 @@ jobs:
         run: composer upgrade --no-interaction --no-progress --prefer-dist
       - name: Download Catalogs
         run: ./bin/create-catalogs-database catalogs.db
-      - name: Tests (phpunit)
+      - name: Tests (phpunit) on linux
+        if: matrix.operating-systems == 'ubuntu-latest'
+        run: vendor/bin/phpunit --testdox --verbose
+      - name: Tests (phpunit) on windows
+        if: matrix.operating-systems == 'windows-latest'
         run: vendor/bin/phpunit --testdox --verbose
