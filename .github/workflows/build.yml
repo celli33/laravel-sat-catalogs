@@ -102,7 +102,7 @@ jobs:
       - name: sudo Install sqlite3 on linux
         if: matrix.operating-systems == 'ubuntu-latest' && github.actor == 'nektos/act'
         run: sudo apt-get install -y -qq sqlite3
-      - name: sudo Install sqlite3 on Windows
+      - name: Install sqlite3 on Windows
         if: matrix.operating-systems == 'windows-latest'
         run: choco install --ignore-checksums --no-progress --yes sqlite
       - name: Get composer cache directory
@@ -125,4 +125,4 @@ jobs:
         if: matrix.operating-systems == 'windows-latest'
         run: vendor/bin/phpunit --testdox --verbose
         env: 
-          sqlite3: 'C:\ProgramData\chocolatey\lib\SQLite\tools'
+          sqlite3: 'C:\ProgramData\chocolatey\lib\SQLite\tools\sqlite-tools-win32-x86-3380100\sqlite3.exe'
