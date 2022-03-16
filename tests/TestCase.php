@@ -19,7 +19,7 @@ abstract class TestCase extends Orchestra
                     'catalogs' => [
                         'driver' => 'sqlite',
                         'url' => null,
-                        'database' => __DIR__ . '/../catalogs.db',
+                        'database' => realpath(__DIR__ . '/../catalogs.db'),
                         'prefix' => '',
                         'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
                     ],
