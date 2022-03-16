@@ -89,14 +89,16 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php-versions }}
-          extensions: sqlite3
+          extensions: sqlite3, fileinfo
           coverage: none
           tools: composer:v2
         env:
           fail-fast: true
+      # only for local testing in nektos
       - name: Update APT on nektos/act
         if: matrix.operating-systems == 'ubuntu-latest' && github.actor == 'nektos/act'
         run: sudo apt-get update -y -qq
+       # only for local testing in nektos
       - name: sudo Install sqlite3 on linux
         if: matrix.operating-systems == 'ubuntu-latest' && github.actor == 'nektos/act'
         run: sudo apt-get install -y -qq sqlite3
