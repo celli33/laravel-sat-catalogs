@@ -80,6 +80,7 @@ jobs:
     runs-on: "ubuntu-latest"
     strategy:
       matrix:
+        operating-systems: [ "ubuntu-latest", "windows-latest" ]
         php-versions: ['7.4', '8.0', '8.1']
     steps:
       - name: Checkout
@@ -94,8 +95,10 @@ jobs:
         env:
           fail-fast: true
       - name: Update APT on nektos/act
+        if: matrix.operating-systems == 'ubuntu-latest' && github.actor == 'nektos/act'
         run: sudo apt-get update -y -qq
-      - name: Install sqlite3 on linux
+      - name: sudo Install sqlite3 on linux
+        if: matrix.operating-systems == 'ubuntu-latest' && github.actor == 'nektos/act'
         run: sudo apt-get install -y -qq sqlite3
       - name: Get composer cache directory
         id: composer-cache
