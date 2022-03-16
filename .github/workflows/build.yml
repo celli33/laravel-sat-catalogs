@@ -80,7 +80,7 @@ jobs:
     runs-on: ${{ matrix.operating-systems }}
     strategy:
       matrix:
-        operating-systems: [ "ubuntu-latest", "windows-latest" ]
+        operating-systems: [ "ubuntu-latest"]
         php-versions: ['7.4', '8.0', '8.1']
     steps:
       - name: Checkout
@@ -95,16 +95,16 @@ jobs:
           tools: composer:v2
         env:
           fail-fast: true
-      - name: Setup PHP on Windows
-        if: matrix.operating-systems == 'windows-latest'
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: ${{ matrix.php-versions }}
-          extensions: sqlite3, fileinfo
-          coverage: none
-          tools: composer:v2, sqlite3
-        env:
-          fail-fast: true
+      # - name: Setup PHP on Windows
+      #   if: matrix.operating-systems == 'windows-latest'
+      #   uses: shivammathur/setup-php@v2
+      #   with:
+      #     php-version: ${{ matrix.php-versions }}
+      #     extensions: sqlite3, fileinfo
+      #     coverage: none
+      #     tools: composer:v2, sqlite3
+      #   env:
+      #     fail-fast: true
       # only for local testing in nektos
       - name: Update APT on nektos/act
         if: matrix.operating-systems == 'ubuntu-latest' && github.actor == 'nektos/act'
@@ -129,6 +129,6 @@ jobs:
       - name: Tests (phpunit) on Linux
         if: matrix.operating-systems == 'ubuntu-latest'
         run: vendor/bin/phpunit --testdox --verbose
-      - name: Tests (phpunit) on Windows
-        if: matrix.operating-systems == 'windows-latest'
-        run: vendor/bin/phpunit --testdox --verbose
+      # - name: Tests (phpunit) on Windows
+      #   if: matrix.operating-systems == 'windows-latest'
+      #   run: vendor/bin/phpunit --testdox --verbose
