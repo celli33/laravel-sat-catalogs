@@ -125,7 +125,7 @@ jobs:
       - name: Install project dependencies
         run: composer upgrade --no-interaction --no-progress --prefer-dist
       - name: Download Catalogs
-        run: ./bin/create-catalogs-database catalogs.db
+        run: ./bin/create-catalogs-database tests/catalogs.db -r
       - name: Tests (phpunit) on Linux
         if: matrix.operating-systems == 'ubuntu-latest'
         run: vendor/bin/phpunit --testdox --verbose
