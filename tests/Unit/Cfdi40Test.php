@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PhpCfdi\LaravelSatCatalogs\Tests\Unit;
 
+use Illuminate\Database\QueryException;
 use Phpcfdi\LaravelSatCatalogs\Models\Cfdi40\Cfdi40Aduana;
 use Phpcfdi\LaravelSatCatalogs\Models\Cfdi40\Cfdi40ClaveUnidad;
 use Phpcfdi\LaravelSatCatalogs\Models\Cfdi40\Cfdi40CodigoPostal;
@@ -33,6 +34,15 @@ use PhpCfdi\LaravelSatCatalogs\Tests\TestCase;
 
 class Cfdi40Test extends TestCase
 {
+    public function test_only_read(): void
+    {
+        /** @var Cfdi40UsoCfdi $usoCfdi */
+        $usoCfdi = Cfdi40UsoCfdi::first();
+        $usoCfdi->id = 'nuevo id';
+        $this->expectException(QueryException::class);
+        $usoCfdi->save();
+    }
+
     public function test_aduanas(): void
     {
         $expectedKeys = [

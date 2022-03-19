@@ -18,7 +18,12 @@ abstract class TestCase extends Orchestra
                 'connections' => [
                     'catalogs' => [
                         'driver' => 'sqlite',
-                        'database' => realpath(__DIR__ . '/catalogs.db'),
+                        'read' => [
+                            'database' => realpath(__DIR__ . '/catalogs.db'),
+                        ],
+                        'write' => [
+                            'database' => '',
+                        ],
                     ],
                 ],
             ],
