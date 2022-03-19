@@ -6,6 +6,10 @@ namespace Phpcfdi\LaravelSatCatalogs\Models\ComercioExterior;
 
 use Phpcfdi\LaravelSatCatalogs\Models\BaseSatCatalogModel;
 
+/**
+ * @property string $id
+ * @property string $texto
+ */
 class CceTipoOperacion extends BaseSatCatalogModel
 {
     /**

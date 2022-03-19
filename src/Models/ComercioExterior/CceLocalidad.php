@@ -6,6 +6,13 @@ namespace Phpcfdi\LaravelSatCatalogs\Models\ComercioExterior;
 
 use Phpcfdi\LaravelSatCatalogs\Models\BaseSatCatalogModel;
 
+/**
+ * @property string $localidad
+ * @property string $estado
+ * @property string $texto
+ * @property string $vigencia_desde
+ * @property string $vigencia_hasta
+ */
 class CceLocalidad extends BaseSatCatalogModel
 {
     /**

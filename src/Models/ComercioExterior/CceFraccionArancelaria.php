@@ -6,6 +6,13 @@ namespace Phpcfdi\LaravelSatCatalogs\Models\ComercioExterior;
 
 use Phpcfdi\LaravelSatCatalogs\Models\BaseSatCatalogModel;
 
+/**
+ * @property string $fraccion
+ * @property string $texto
+ * @property string $vigencia_desde
+ * @property string $vigencia_hasta
+ * @property string $unidad
+ */
 class CceFraccionArancelaria extends BaseSatCatalogModel
 {
     /**
