@@ -6,6 +6,11 @@ namespace Phpcfdi\LaravelSatCatalogs\Models\Cfdi40;
 
 use Phpcfdi\LaravelSatCatalogs\Models\BaseSatCatalogModel;
 
+/**
+ * @property string $colonia
+ * @property string $codigo_postal
+ * @property string $texto
+ */
 class Cfdi40Colonia extends BaseSatCatalogModel
 {
     /**

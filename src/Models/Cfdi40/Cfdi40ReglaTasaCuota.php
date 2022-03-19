@@ -6,6 +6,17 @@ namespace Phpcfdi\LaravelSatCatalogs\Models\Cfdi40;
 
 use Phpcfdi\LaravelSatCatalogs\Models\BaseSatCatalogModel;
 
+/**
+ * @property string $tipo
+ * @property string $minimo
+ * @property string $valor
+ * @property string $impuesto
+ * @property string $factor
+ * @property int $traslado
+ * @property int $retencion
+ * @property string $vigencia_desde
+ * @property string $vigencia_hasta
+ */
 class Cfdi40ReglaTasaCuota extends BaseSatCatalogModel
 {
     /**

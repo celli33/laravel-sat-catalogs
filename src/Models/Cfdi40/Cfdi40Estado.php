@@ -6,6 +6,13 @@ namespace Phpcfdi\LaravelSatCatalogs\Models\Cfdi40;
 
 use Phpcfdi\LaravelSatCatalogs\Models\BaseSatCatalogModel;
 
+/**
+ * @property string $estado
+ * @property string $pais
+ * @property string $texto
+ * @property string $vigencia_desde
+ * @property string $vigencia_hasta
+ */
 class Cfdi40Estado extends BaseSatCatalogModel
 {
     /**

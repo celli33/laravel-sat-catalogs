@@ -6,6 +6,11 @@ namespace Phpcfdi\LaravelSatCatalogs\Models\Cfdi40;
 
 use Phpcfdi\LaravelSatCatalogs\Models\BaseSatCatalogModel;
 
+/**
+ * @property string $id
+ * @property string $vigencia_desde
+ * @property string $vigencia_hasta
+ */
 class Cfdi40PatenteAduanal extends BaseSatCatalogModel
 {
     /**

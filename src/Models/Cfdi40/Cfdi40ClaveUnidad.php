@@ -6,6 +6,15 @@ namespace Phpcfdi\LaravelSatCatalogs\Models\Cfdi40;
 
 use Phpcfdi\LaravelSatCatalogs\Models\BaseSatCatalogModel;
 
+/**
+ * @property string $id
+ * @property string $texto
+ * @property string $descripcion
+ * @property string $notas
+ * @property string $vigencia_desde
+ * @property string $vigencia_hasta
+ * @property string $simbolo
+ */
 class Cfdi40ClaveUnidad extends BaseSatCatalogModel
 {
     /**
