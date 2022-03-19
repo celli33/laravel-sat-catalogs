@@ -2,4 +2,4 @@
 /vendor/
 /tools/
 composer.lock
-catalogs.db
+tests/catalogs.db
