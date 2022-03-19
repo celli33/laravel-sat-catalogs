@@ -66,6 +66,9 @@ Considera las siguientes directrices:
 composer update
 phive update
 
+# Crea la base de datos
+./bin/create-catalogs-database tests/catalogs.db -r
+
 # Verificación de estilo de código
 composer dev:check-style
 
