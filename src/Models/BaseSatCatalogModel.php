@@ -56,7 +56,7 @@ abstract class BaseSatCatalogModel extends Model
         try {
             $date = DateTimeImmutable::createFromFormat('Y-m-d', $this->vigencia_desde);
             return $date ? $date->setTime(0, 0, 0) : null;
-        } catch (\Throwable) {
+        } catch (\Throwable $th) {
             return null;
         }
     }
@@ -69,7 +69,7 @@ abstract class BaseSatCatalogModel extends Model
         try {
             $date = DateTimeImmutable::createFromFormat('Y-m-d', $this->vigencia_hasta);
             return $date ? $date->setTime(23, 59, 59) : null;
-        } catch (\Throwable) {
+        } catch (\Throwable $th) {
             return null;
         }
     }

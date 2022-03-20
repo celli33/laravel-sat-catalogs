@@ -53,7 +53,7 @@ class BaseSatCatalogModelTest extends TestCase
      * @dataProvider datesProvider
      *
      */
-    public function test_is_valid_on_given_date(?string $since, ?string $until, mixed $dateToCheck, bool $expected): void
+    public function test_is_valid_on_given_date(?string $since, ?string $until, $dateToCheck, bool $expected): void
     {
         $baseModel = $this->createBaseModel($since, $until);
 
