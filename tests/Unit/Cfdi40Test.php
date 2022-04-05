@@ -228,7 +228,7 @@ class Cfdi40Test extends TestCase
             'vigencia_desde',
             'vigencia_hasta',
         ];
-        $this->assertTableNamePropertiesAndCount(Cfdi40NumeroPedimentoAduana::class, 'cfdi_40_numeros_pedimento_aduana', $expectedKeys, 44163);
+        $this->assertTableNamePropertiesAndCount(Cfdi40NumeroPedimentoAduana::class, 'cfdi_40_numeros_pedimento_aduana', $expectedKeys, 44170);
     }
 
     public function test_objeto_impuesto(): void
