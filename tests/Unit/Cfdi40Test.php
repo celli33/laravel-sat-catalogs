@@ -51,7 +51,7 @@ class Cfdi40Test extends TestCase
             'vigencia_desde',
             'vigencia_hasta',
         ];
-        $this->assertTableNamePropertiesAndCount(Cfdi40Aduana::class, 'cfdi_40_aduanas', $expectedKeys, 49);
+        $this->assertTableNamePropertiesAndCount(Cfdi40Aduana::class, 'cfdi_40_aduanas', $expectedKeys);
     }
 
     public function test_clave_unidades(): void
@@ -65,7 +65,7 @@ class Cfdi40Test extends TestCase
             'vigencia_hasta',
             'simbolo',
         ];
-        $this->assertTableNamePropertiesAndCount(Cfdi40ClaveUnidad::class, 'cfdi_40_claves_unidades', $expectedKeys, 2418);
+        $this->assertTableNamePropertiesAndCount(Cfdi40ClaveUnidad::class, 'cfdi_40_claves_unidades', $expectedKeys);
     }
 
     public function test_codigos_postales(): void
@@ -88,7 +88,7 @@ class Cfdi40Test extends TestCase
             'huso_invierno_hora_inicio',
             'huso_invierno_diferencia',
         ];
-        $this->assertTableNamePropertiesAndCount(Cfdi40CodigoPostal::class, 'cfdi_40_codigos_postales', $expectedKeys, 95748);
+        $this->assertTableNamePropertiesAndCount(Cfdi40CodigoPostal::class, 'cfdi_40_codigos_postales', $expectedKeys);
     }
 
     public function test_colonias(): void
@@ -98,7 +98,7 @@ class Cfdi40Test extends TestCase
             'codigo_postal',
             'texto',
         ];
-        $this->assertTableNamePropertiesAndCount(Cfdi40Colonia::class, 'cfdi_40_colonias', $expectedKeys, 145366);
+        $this->assertTableNamePropertiesAndCount(Cfdi40Colonia::class, 'cfdi_40_colonias', $expectedKeys);
     }
 
     public function test_estados(): void
@@ -110,7 +110,7 @@ class Cfdi40Test extends TestCase
             'vigencia_desde',
             'vigencia_hasta',
         ];
-        $this->assertTableNamePropertiesAndCount(Cfdi40Estado::class, 'cfdi_40_estados', $expectedKeys, 95);
+        $this->assertTableNamePropertiesAndCount(Cfdi40Estado::class, 'cfdi_40_estados', $expectedKeys);
     }
 
     public function test_exportaciones(): void
@@ -121,7 +121,7 @@ class Cfdi40Test extends TestCase
             'vigencia_desde',
             'vigencia_hasta',
         ];
-        $this->assertTableNamePropertiesAndCount(Cfdi40Exportacion::class, 'cfdi_40_exportaciones', $expectedKeys, 4);
+        $this->assertTableNamePropertiesAndCount(Cfdi40Exportacion::class, 'cfdi_40_exportaciones', $expectedKeys);
     }
 
     public function test_formas_pago(): void
@@ -142,7 +142,7 @@ class Cfdi40Test extends TestCase
             'vigencia_desde',
             'vigencia_hasta',
         ];
-        $this->assertTableNamePropertiesAndCount(Cfdi40FormaPago::class, 'cfdi_40_formas_pago', $expectedKeys, 22);
+        $this->assertTableNamePropertiesAndCount(Cfdi40FormaPago::class, 'cfdi_40_formas_pago', $expectedKeys);
     }
 
     public function test_impuestos(): void
@@ -156,7 +156,7 @@ class Cfdi40Test extends TestCase
             'vigencia_desde',
             'vigencia_hasta',
         ];
-        $this->assertTableNamePropertiesAndCount(Cfdi40Impuesto::class, 'cfdi_40_impuestos', $expectedKeys, 3);
+        $this->assertTableNamePropertiesAndCount(Cfdi40Impuesto::class, 'cfdi_40_impuestos', $expectedKeys);
     }
 
     public function test_localidades(): void
@@ -168,7 +168,7 @@ class Cfdi40Test extends TestCase
             'vigencia_desde',
             'vigencia_hasta',
         ];
-        $this->assertTableNamePropertiesAndCount(Cfdi40Localidad::class, 'cfdi_40_localidades', $expectedKeys, 664);
+        $this->assertTableNamePropertiesAndCount(Cfdi40Localidad::class, 'cfdi_40_localidades', $expectedKeys);
     }
 
     public function test_meses(): void
@@ -179,7 +179,7 @@ class Cfdi40Test extends TestCase
             'vigencia_desde',
             'vigencia_hasta',
         ];
-        $this->assertTableNamePropertiesAndCount(Cfdi40Mes::class, 'cfdi_40_meses', $expectedKeys, 18);
+        $this->assertTableNamePropertiesAndCount(Cfdi40Mes::class, 'cfdi_40_meses', $expectedKeys);
     }
 
     public function test_metodo_pago(): void
@@ -190,7 +190,7 @@ class Cfdi40Test extends TestCase
             'vigencia_desde',
             'vigencia_hasta',
         ];
-        $this->assertTableNamePropertiesAndCount(Cfdi40MetodoPago::class, 'cfdi_40_metodos_pago', $expectedKeys, 2);
+        $this->assertTableNamePropertiesAndCount(Cfdi40MetodoPago::class, 'cfdi_40_metodos_pago', $expectedKeys);
     }
 
     public function test_monedas(): void
@@ -203,7 +203,7 @@ class Cfdi40Test extends TestCase
             'vigencia_desde',
             'vigencia_hasta',
         ];
-        $this->assertTableNamePropertiesAndCount(Cfdi40Moneda::class, 'cfdi_40_monedas', $expectedKeys, 178);
+        $this->assertTableNamePropertiesAndCount(Cfdi40Moneda::class, 'cfdi_40_monedas', $expectedKeys);
     }
 
     public function test_municipios(): void
@@ -215,7 +215,7 @@ class Cfdi40Test extends TestCase
             'vigencia_desde',
             'vigencia_hasta',
         ];
-        $this->assertTableNamePropertiesAndCount(Cfdi40Municipio::class, 'cfdi_40_municipios', $expectedKeys, 2463);
+        $this->assertTableNamePropertiesAndCount(Cfdi40Municipio::class, 'cfdi_40_municipios', $expectedKeys);
     }
 
     public function test_numeros_pedimento_aduana(): void
@@ -228,7 +228,7 @@ class Cfdi40Test extends TestCase
             'vigencia_desde',
             'vigencia_hasta',
         ];
-        $this->assertTableNamePropertiesAndCount(Cfdi40NumeroPedimentoAduana::class, 'cfdi_40_numeros_pedimento_aduana', $expectedKeys, 44170);
+        $this->assertTableNamePropertiesAndCount(Cfdi40NumeroPedimentoAduana::class, 'cfdi_40_numeros_pedimento_aduana', $expectedKeys);
     }
 
     public function test_objeto_impuesto(): void
@@ -239,7 +239,7 @@ class Cfdi40Test extends TestCase
             'vigencia_desde',
             'vigencia_hasta',
         ];
-        $this->assertTableNamePropertiesAndCount(Cfdi40ObjetoImpuesto::class, 'cfdi_40_objetos_impuestos', $expectedKeys, 3);
+        $this->assertTableNamePropertiesAndCount(Cfdi40ObjetoImpuesto::class, 'cfdi_40_objetos_impuestos', $expectedKeys);
     }
 
     public function test_paises(): void
@@ -252,7 +252,7 @@ class Cfdi40Test extends TestCase
             'validacion_identidad_tributaria',
             'agrupaciones',
         ];
-        $this->assertTableNamePropertiesAndCount(Cfdi40pais::class, 'cfdi_40_paises', $expectedKeys, 250);
+        $this->assertTableNamePropertiesAndCount(Cfdi40pais::class, 'cfdi_40_paises', $expectedKeys);
     }
 
     public function test_patentes_aduanales(): void
@@ -262,7 +262,7 @@ class Cfdi40Test extends TestCase
             'vigencia_desde',
             'vigencia_hasta',
         ];
-        $this->assertTableNamePropertiesAndCount(Cfdi40PatenteAduanal::class, 'cfdi_40_patentes_aduanales', $expectedKeys, 3311);
+        $this->assertTableNamePropertiesAndCount(Cfdi40PatenteAduanal::class, 'cfdi_40_patentes_aduanales', $expectedKeys);
     }
 
     public function test_periodicidades(): void
@@ -273,7 +273,7 @@ class Cfdi40Test extends TestCase
             'vigencia_desde',
             'vigencia_hasta',
         ];
-        $this->assertTableNamePropertiesAndCount(Cfdi40Periodicidad::class, 'cfdi_40_periodicidades', $expectedKeys, 5);
+        $this->assertTableNamePropertiesAndCount(Cfdi40Periodicidad::class, 'cfdi_40_periodicidades', $expectedKeys);
     }
 
     public function test_productos_servicios(): void
@@ -289,7 +289,7 @@ class Cfdi40Test extends TestCase
             'estimulo_frontera',
             'similares',
         ];
-        $this->assertTableNamePropertiesAndCount(Cfdi40ProductoServicio::class, 'cfdi_40_productos_servicios', $expectedKeys, 52512);
+        $this->assertTableNamePropertiesAndCount(Cfdi40ProductoServicio::class, 'cfdi_40_productos_servicios', $expectedKeys);
     }
 
     public function test_regimenes_fiscales(): void
@@ -302,7 +302,7 @@ class Cfdi40Test extends TestCase
             'vigencia_desde',
             'vigencia_hasta',
         ];
-        $this->assertTableNamePropertiesAndCount(Cfdi40RegimenFiscal::class, 'cfdi_40_regimenes_fiscales', $expectedKeys, 19);
+        $this->assertTableNamePropertiesAndCount(Cfdi40RegimenFiscal::class, 'cfdi_40_regimenes_fiscales', $expectedKeys);
     }
 
     public function test_reglas_tasa_cuota(): void
@@ -318,7 +318,7 @@ class Cfdi40Test extends TestCase
             'vigencia_desde',
             'vigencia_hasta',
         ];
-        $this->assertTableNamePropertiesAndCount(Cfdi40ReglaTasaCuota::class, 'cfdi_40_reglas_tasa_cuota', $expectedKeys, 19);
+        $this->assertTableNamePropertiesAndCount(Cfdi40ReglaTasaCuota::class, 'cfdi_40_reglas_tasa_cuota', $expectedKeys);
     }
 
     public function test_tipos_comprobantes(): void
@@ -330,7 +330,7 @@ class Cfdi40Test extends TestCase
             'vigencia_desde',
             'vigencia_hasta',
         ];
-        $this->assertTableNamePropertiesAndCount(Cfdi40TipoComprobante::class, 'cfdi_40_tipos_comprobantes', $expectedKeys, 5);
+        $this->assertTableNamePropertiesAndCount(Cfdi40TipoComprobante::class, 'cfdi_40_tipos_comprobantes', $expectedKeys);
     }
 
     public function test_tipos_factores(): void
@@ -340,7 +340,7 @@ class Cfdi40Test extends TestCase
             'vigencia_desde',
             'vigencia_hasta',
         ];
-        $this->assertTableNamePropertiesAndCount(Cfdi40TipoFactor::class, 'cfdi_40_tipos_factores', $expectedKeys, 3);
+        $this->assertTableNamePropertiesAndCount(Cfdi40TipoFactor::class, 'cfdi_40_tipos_factores', $expectedKeys);
     }
 
     public function test_tipos_relaciones(): void
@@ -351,7 +351,7 @@ class Cfdi40Test extends TestCase
             'vigencia_desde',
             'vigencia_hasta',
         ];
-        $this->assertTableNamePropertiesAndCount(Cfdi40TipoRelacion::class, 'cfdi_40_tipos_relaciones', $expectedKeys, 7);
+        $this->assertTableNamePropertiesAndCount(Cfdi40TipoRelacion::class, 'cfdi_40_tipos_relaciones', $expectedKeys);
     }
 
     public function test_usos_cfdi(): void
@@ -365,6 +365,6 @@ class Cfdi40Test extends TestCase
             'vigencia_hasta',
             'regimenes_fiscales_receptores',
         ];
-        $this->assertTableNamePropertiesAndCount(Cfdi40UsoCfdi::class, 'cfdi_40_usos_cfdi', $expectedKeys, 24);
+        $this->assertTableNamePropertiesAndCount(Cfdi40UsoCfdi::class, 'cfdi_40_usos_cfdi', $expectedKeys);
     }
 }

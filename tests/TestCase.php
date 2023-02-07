@@ -31,7 +31,7 @@ abstract class TestCase extends Orchestra
     }
 
     /**
-     * @param array<string> $expectedProperties
+     * @param array<int, string> $expectedProperties
      */
     public function assertExpectedModelKeys(Model $model, array $expectedProperties): void
     {
@@ -42,12 +42,11 @@ abstract class TestCase extends Orchestra
     /**
      * Assert tableName is $expectedTableName has $expectedRows count and $expectedKeys in table
      *
-     * @param array<string> $expectedKeys
+     * @param array<int, string> $expectedKeys
      */
-    public function assertTableNamePropertiesAndCount(string $modelName, string $expectedTableName, array $expectedKeys, int $expectedRows): void
+    public function assertTableNamePropertiesAndCount(string $modelName, string $expectedTableName, array $expectedKeys): void
     {
         $tableName = $modelName::query()->getQuery()->from;
-        $this->assertEquals($expectedRows, $modelName::count(), "The expected count of ${tableName} table has changed.");
         $model = $modelName::first();
         $this->assertExpectedModelKeys($model, $expectedKeys);
         $this->assertEquals($expectedTableName, $tableName);

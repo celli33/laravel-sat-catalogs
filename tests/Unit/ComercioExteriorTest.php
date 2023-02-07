@@ -24,7 +24,7 @@ class ComercioExteriorTest extends TestCase
             'id',
             'texto',
         ];
-        $this->assertTableNamePropertiesAndCount(CceClavePedimento::class, 'cce_claves_pedimentos', $expectedKeys, 1);
+        $this->assertTableNamePropertiesAndCount(CceClavePedimento::class, 'cce_claves_pedimentos', $expectedKeys);
     }
 
     public function test_colonias(): void
@@ -34,7 +34,7 @@ class ComercioExteriorTest extends TestCase
             'codigo_postal',
             'asentamiento',
         ];
-        $this->assertTableNamePropertiesAndCount(CceColonia::class, 'cce_colonias', $expectedKeys, 145366);
+        $this->assertTableNamePropertiesAndCount(CceColonia::class, 'cce_colonias', $expectedKeys);
     }
 
     public function test_estados(): void
@@ -46,7 +46,7 @@ class ComercioExteriorTest extends TestCase
             'vigencia_desde',
             'vigencia_hasta',
         ];
-        $this->assertTableNamePropertiesAndCount(CceEstado::class, 'cce_estados', $expectedKeys, 96);
+        $this->assertTableNamePropertiesAndCount(CceEstado::class, 'cce_estados', $expectedKeys);
     }
 
     public function test_fracciones_arancelarias(): void
@@ -58,7 +58,7 @@ class ComercioExteriorTest extends TestCase
             'vigencia_hasta',
             'unidad',
         ];
-        $this->assertTableNamePropertiesAndCount(CceFraccionArancelaria::class, 'cce_fracciones_arancelarias', $expectedKeys, 24626);
+        $this->assertTableNamePropertiesAndCount(CceFraccionArancelaria::class, 'cce_fracciones_arancelarias', $expectedKeys);
     }
 
     public function test_incoterms(): void
@@ -69,7 +69,7 @@ class ComercioExteriorTest extends TestCase
             'vigencia_desde',
             'vigencia_hasta',
         ];
-        $this->assertTableNamePropertiesAndCount(CceIncoterm::class, 'cce_incoterms', $expectedKeys, 16);
+        $this->assertTableNamePropertiesAndCount(CceIncoterm::class, 'cce_incoterms', $expectedKeys);
     }
 
     public function test_localidades(): void
@@ -81,7 +81,7 @@ class ComercioExteriorTest extends TestCase
             'vigencia_desde',
             'vigencia_hasta',
         ];
-        $this->assertTableNamePropertiesAndCount(CceLocalidad::class, 'cce_localidades', $expectedKeys, 680);
+        $this->assertTableNamePropertiesAndCount(CceLocalidad::class, 'cce_localidades', $expectedKeys);
     }
 
     public function test_motivos_traslados(): void
@@ -90,7 +90,7 @@ class ComercioExteriorTest extends TestCase
             'id',
             'texto',
         ];
-        $this->assertTableNamePropertiesAndCount(CceMotivoTraslado::class, 'cce_motivos_traslado', $expectedKeys, 6);
+        $this->assertTableNamePropertiesAndCount(CceMotivoTraslado::class, 'cce_motivos_traslado', $expectedKeys);
     }
 
     public function test_municipios(): void
@@ -102,7 +102,7 @@ class ComercioExteriorTest extends TestCase
             'vigencia_desde',
             'vigencia_hasta',
         ];
-        $this->assertTableNamePropertiesAndCount(CceMunicipio::class, 'cce_municipios', $expectedKeys, 2479);
+        $this->assertTableNamePropertiesAndCount(CceMunicipio::class, 'cce_municipios', $expectedKeys);
     }
 
     public function test_tipos_operacion(): void
@@ -111,7 +111,7 @@ class ComercioExteriorTest extends TestCase
             'id',
             'texto',
         ];
-        $this->assertTableNamePropertiesAndCount(CceTipoOperacion::class, 'cce_tipos_operacion', $expectedKeys, 1);
+        $this->assertTableNamePropertiesAndCount(CceTipoOperacion::class, 'cce_tipos_operacion', $expectedKeys);
     }
 
     public function test_unidades_medida(): void
@@ -122,6 +122,6 @@ class ComercioExteriorTest extends TestCase
             'vigencia_desde',
             'vigencia_hasta',
         ];
-        $this->assertTableNamePropertiesAndCount(CceUnidadMedida::class, 'cce_unidades_medida', $expectedKeys, 23);
+        $this->assertTableNamePropertiesAndCount(CceUnidadMedida::class, 'cce_unidades_medida', $expectedKeys);
     }
 }

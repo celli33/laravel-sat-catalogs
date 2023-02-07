@@ -19,7 +19,7 @@ class CceClavePedimento extends BaseSatCatalogModel
     /**
      * The attributes that are mass assignable.
      *
-     * @var array<string>
+     * @var array<int, string>
      */
     protected $fillable = [
         'id',

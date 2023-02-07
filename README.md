@@ -52,7 +52,7 @@ Si quieres configurar la base de datos para que sea solo de lectura puedes confi
         ],
 ```
 
-## Ejemplos de uso:
+## Ejemplos de uso
 
 Los catálogos vienen distribuidos dentro de su correspondiente namespace y se usan del mismo mode que un modelo común de laravel, por ejemplo, para obtener catálogos de Cfdi40:
 

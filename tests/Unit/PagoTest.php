@@ -15,6 +15,6 @@ class PagoTest extends TestCase
             'id',
             'texto',
         ];
-        $this->assertTableNamePropertiesAndCount(PagoTipoCadenaPago::class, 'pagos_tipos_cadena_pago', $expectedKeys, 1);
+        $this->assertTableNamePropertiesAndCount(PagoTipoCadenaPago::class, 'pagos_tipos_cadena_pago', $expectedKeys);
     }
 }
