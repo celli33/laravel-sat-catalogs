@@ -12,7 +12,7 @@
         "php": "^7.4|^8.0|^8.1|^8.2",
         "ext-sqlite3": "*",
         "illuminate/database": "^7.0|^8.0|^9.0",
-        "illuminate/support": "^7.0|^8.0|^9.0"
+        "illuminate/support": "^7.0|^8.0|^9.0|^10.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5",
@@ -31,7 +31,10 @@
         }
     },
     "scripts": {
-        "dev:build": ["@dev:fix-style", "@dev:test"],
+        "dev:build": [
+            "@dev:fix-style",
+            "@dev:test"
+        ],
         "dev:check-style": [
             "@php tools/php-cs-fixer fix --dry-run --verbose",
             "@php tools/phpcs --colors -sp src/ tests/"
@@ -46,7 +49,9 @@
             "@php tools/phpstan analyse --no-interaction --no-progress"
         ]
     },
-    "bin": ["bin/create-catalogs-database"],
+    "bin": [
+        "bin/create-catalogs-database"
+    ],
     "authors": [
         {
             "name": "celli33",
